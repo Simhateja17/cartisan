@@ -1,0 +1,41 @@
+# OS
+.DS_Store
+
+# Everything at the root except the two apps
+/*
+!/.gitignore
+!/README.md
+!/architecture.excalidraw
+!/backend/
+!/frontend/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+.venv-old/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.db
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+build/
+coverage/
+*.tsbuildinfo
+.wrangler/
+.playwright-cli/
+
+# Logs
+nohup.out
+*.log
+npm-debug.log*
+
+# Set-aside nested repo history
+.git.bak/
