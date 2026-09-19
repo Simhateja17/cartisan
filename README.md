@@ -26,12 +26,18 @@ Every design decision in this repository follows from that one sentence. The mod
 | `frontend/` | Next.js app: the storefront chat, the merchant portal, the evidence viewer, and the operations console. |
 | `backend/` | Python service: both agents, the shared agent runtime, the commerce core, and the Razorpay integration. |
 
-This repository is the combined submission. The two halves were built as separate repositories, and the **full commit history lives there**, not here:
+This repository is the combined submission. `backend/` and `frontend/` are Git submodules that track the two source repositories, so their full commit histories live there:
 
 - Frontend repo and history: https://github.com/Simhateja17/razorpay_frontend
 - Backend repo and history: https://github.com/Simhateja17/razorpay_backend
 
-This repository was created for submission by combining the two trees into a single initial commit, so it deliberately carries no history of its own. If you want to see how Cartisan was actually built, commit by commit, open the two repositories above.
+Clone the mother repository with its children initialized:
+
+```bash
+git clone --recurse-submodules https://github.com/Simhateja17/cartisan.git
+```
+
+For an existing checkout, initialize them with `git submodule update --init --recursive`. The mother repository records which commit of each child is used; changes inside either child are committed and pushed in that child repository, then the updated submodule pointer is committed here.
 
 ---
 
